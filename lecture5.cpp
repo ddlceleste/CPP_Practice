@@ -1,5 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
 
 int main(){
 	// NTS: cin.ignore();
@@ -45,6 +48,24 @@ int main(){
 	// Output
 	std::cout << "Your full name is " << fullName << std::endl;
 	std::cout << "You are " << age << " years old" << std::endl;
+
+	// Length
+	std::string lengthString;
+	std::cout << "Length is: " << lengthString.length() << " characters." << std::endl;
+
+	//// Math
+	double userValue = 0.0;
+	std::cout << "Enter a Number: ";
+	std::cin >> userValue;
+	std::cout << "Sine: "           << sin(userValue) << std::endl;
+	std::cout << "Tangent: "        << tan(userValue) << std::endl;
+	std::cout << "Absolute Value: " << abs(userValue) << std::endl;
+
+	// Random
+	srand(time(0));
+	std::cout << 1 + rand() % (10 - 1 + 1) << std::endl;
+	std::cout << 1 + rand() % (100 - 1 + 1) << std::endl;
+	std::cout << 1 + rand() % (1000 - 1 + 1) << std::endl;
 
 
 
