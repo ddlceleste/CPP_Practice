@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cmath>
 
 using namespace std;
 
@@ -47,13 +46,18 @@ int main() {
 // Takes in a float and returns true if its greater than or equal to 6.7 otherwise it returns false
 bool checkValid(float myFloat){
 
-	if(myFloat >= 6.7){
+	bool flag;
+	if(myFloat >= 6.7f){
 
-		return true;
+		flag = true;
+	}
+	else{
+
+		flag = false;
 	}
 
 	numCalls++;
-	return false;
+	return flag;
 }
 
 // Gets a float from the user and validates input then returns float
@@ -66,7 +70,7 @@ float getFPNumber(){
 		cout << "Enter a floating-point value: ";
 		cin >> userFloat;
 
-	} while(checkValid(userFloat));
+	} while(!checkValid(userFloat));
 
 	numCalls++;
 	return userFloat;
@@ -81,7 +85,7 @@ void myFunc(float userFloat, bool flag){
 
 	if(flag){
 
-		cout << pow(userFloat, 2) << endl;
+		cout << userFloat * userFloat << endl;
 	}
 	else{
 
