@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cmath>
 #include <ctime>
-#include <cstdlib>
 using namespace std;
 //
 
@@ -55,10 +54,8 @@ int main(){
         else if(userChoice == 2)
         	changeTargetCoordinates(targetPositionX, targetPositionY);
 
-        else if(userChoice == 3){
-        	cin.ignore();
+        else if(userChoice == 3)
         	simulate(equationCoefficientA, equationCoefficientB, equationCoefficientC, targetPositionX, targetPositionY);
-        }
 
         else if(userChoice != EXIT_VALUE){
 
